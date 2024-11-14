@@ -37,7 +37,6 @@ class BikeRestController{
 
     async getAllBikes(req, res) {
         const location = req.params.location.toUpperCase();
-        console.log(location);
         try {
             await this.transactionManager.startTransaction();
 
@@ -55,8 +54,8 @@ class BikeRestController{
     }
     async getTeam(req, res) {
         const team = {
-            teamName: "Your Team Name",
-            members: ["Member1", "Member2", "Member3"]
+            teamName: "Group 2",
+            members: ["Agata", "Alessio", "Aleks"]
         };
         res.json(team);
     }
