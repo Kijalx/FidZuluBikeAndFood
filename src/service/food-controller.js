@@ -17,8 +17,8 @@ class FoodRestController{
         // this.app.use(cors());
 
         const router = express.Router();
-        router.get('/foods/all/:location', this.getAllFoods.bind(this));
-        router.get('/foods/team', this.getTeam.bind(this));
+        router.get('/food/all/:location', this.getAllFoods.bind(this));
+        router.get('/food/team', this.getTeam.bind(this));
         // router.get('/foods/:location/:name', this.getfood.bind(this));
         // router.post('/widgets', this.addWidget.bind(this));
         // router.put('/widgets', this.updateWidget.bind(this));
