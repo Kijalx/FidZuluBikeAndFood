@@ -1,11 +1,9 @@
--- Schema definition for the the famous ships database
-
 DROP TABLE food;
 
 CREATE TABLE food (
-    name	VARCHAR(512),
-    brand	VARCHAR(512),
-    weight	VARCHAR(512),
-    calories	INT,
-    price	DOUBLE
+    name VARCHAR2(512) PRIMARY KEY NOT NULL,
+    brand VARCHAR2(512),
+    weight VARCHAR2(512),
+    calories INT,
+    price NUMBER
 );
