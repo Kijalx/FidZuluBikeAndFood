@@ -37,7 +37,6 @@ class BikeRestController{
 
     async getAllBikes(req, res) {
         const location = req.params.location.toUpperCase();
-        console.log(location);
         try {
             await this.transactionManager.startTransaction();
 

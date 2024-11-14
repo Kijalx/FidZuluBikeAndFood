@@ -6,7 +6,10 @@
   "scripts": {
     "bike": "node src/service/bike-controller.js",
     "food": "node src/service/food-controller.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine",
+    "bike-unit": "jasmine spec/controllers/bike-controller.spec.js",
+    "bike-e2e": "jasmine spec/controllers/bike-controller.e2e.spec.js",
+    "bike-integration": "jasmine spec/controllers/bike-controller.integration.spec.js"
   },
   "keywords": [],
   "author": "",
