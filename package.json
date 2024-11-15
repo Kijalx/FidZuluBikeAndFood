@@ -6,10 +6,12 @@
   "scripts": {
     "bike": "node src/service/bike-controller.js",
     "food": "node src/service/food-controller.js",
+    "concur": "concurrently \"npm run bike\" \"npm run food\"",
     "test": "jasmine",
     "bike-unit": "jasmine spec/controllers/bike-controller.spec.js",
-    "bike-e2e": "jasmine spec/controllers/bike-controller.e2e.spec.js",
-    "bike-integration": "jasmine spec/controllers/bike-controller.integration.spec.js"
+    "bike-integration": "jasmine spec/controllers/bike-controller.integration.spec.js",
+    "food-unit": "jasmine spec/controllers/food-controller.spec.js",
+    "food-integration": "jasmine spec/controllers/food-controller.integration.spec.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "concurrently": "^8.2.2",
     "oracledb": "^6.6.0"
   },
   "devDependencies": {

@@ -10,7 +10,6 @@ class BikeDao {
         const sql = `
             select name, brand, color, price 
               from bike
-             order by price
         `;
         const bikes = [];
 
@@ -25,7 +24,7 @@ class BikeDao {
             case 'US-NC':
                 multi = 1.08;
                 break;
-            case 'INDIA':
+            case 'IN':
                 multi = 1.18;
                 break;
             default:

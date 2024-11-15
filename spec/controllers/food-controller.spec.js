@@ -1,41 +1,41 @@
-const BikeRestController = require('../../src/service/bike-controller');
+const FoodRestController = require('../../src/service/food-controller');
 
 console.error = arg => {}
 
-const testBike = require('../testjson/Bikejson.json')
+const testFood = require('../testjson/Foodjson.json')
 
-describe('RESTful controller unit tests for Bike operations:', () => {
+describe('RESTful controller unit tests for Food operations:', () => {
     let controller;
     let mockDao;
     let mockHttpResponse;
     let mockTransactionManager;
 
     beforeEach(() => {
-        mockDao = jasmine.createSpyObj('mockDao', ['queryForAllBike']);
+        mockDao = jasmine.createSpyObj('mockDao', ['queryForAllFood']);
 
         mockTransactionManager = jasmine.createSpyObj('mockTransactionManager',['startTransaction', 'commitTransaction', 'rollbackTransaction']);
 
-        controller = new BikeRestController();
-        controller.bikeDao = mockDao;
+        controller = new FoodRestController();
+        controller.foodDao = mockDao;
         controller.TransactionManager = mockTransactionManager;
         mockHttpResponse = jasmine.createSpyObj('mockHttpResponse', ['status', 'json']);
         mockHttpResponse.status.and.returnValue(mockHttpResponse);
     });
 
-    describe('retrieve all bikes', () => {
+    describe('retrieve all food', () => {
         it('succeeds', async () => {
-            mockDao.queryForAllBike.and.returnValue(testBike);
+            mockDao.queryForAllFood.and.returnValue(testFood);
             const req = { params: { location: 'ie' } };
 
-            await controller.getAllBikes(req, mockHttpResponse);
-            expect(mockHttpResponse.json).toHaveBeenCalledOnceWith(testBike);
+            await controller.getAllFoods(req, mockHttpResponse);
+            expect(mockHttpResponse.json).toHaveBeenCalledOnceWith(testFood);
         });
 
         it('fails due to a DAO exception', async () => {
-            mockDao.queryForAllBike.and.throwError('error');
+            mockDao.queryForAllFood.and.throwError('error');
             const req = { params: { location: 'ie' } };
 
-            await controller.getAllBikes(req, mockHttpResponse);
+            await controller.getAllFoods(req, mockHttpResponse);
                 
             expect(mockHttpResponse.status).toHaveBeenCalledOnceWith(500);
         });
