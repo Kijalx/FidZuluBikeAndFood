@@ -1,17 +1,5 @@
 [
   {
-    "name": "Mamba Sport 12\" Balance Bike",
-    "brand": "Mamba Bikes",
-    "color": "black",
-    "price": 75.88
-  },
-  {
-    "name": "Kobe Aluminum Balance",
-    "brand": "Kobe",
-    "color": "blue",
-    "price": 88.56
-  },
-  {
     "name": "Pomona Mens Cruiser Bike",
     "brand": "Northwoods",
     "color": "silver",
@@ -22,5 +10,17 @@
     "brand": "DJ Bikes",
     "color": "grey",
     "price": 1599.86
+  },
+  {
+    "name": "Mamba Sport 12\" Balance Bike",
+    "brand": "Mamba Bikes",
+    "color": "black",
+    "price": 75.88
+  },
+  {
+    "name": "Kobe Aluminum Balance",
+    "brand": "Kobe",
+    "color": "blue",
+    "price": 88.56
   }
 ]

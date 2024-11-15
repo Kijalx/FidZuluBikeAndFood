@@ -10,7 +10,6 @@ class FoodDao {
         const sql = `
             select name, brand, weight, calories, price 
               from food
-             order by price
         `;
         const foods = [];
 
